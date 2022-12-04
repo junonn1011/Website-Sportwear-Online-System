@@ -49,7 +49,7 @@ namespace FYP
                 totalPrice = qty * cost;
                 lblToTal.Text = totalPrice.ToString();
 
-
+                //jshbdkjsjaksndkjnaskdasd
             }
 
 
