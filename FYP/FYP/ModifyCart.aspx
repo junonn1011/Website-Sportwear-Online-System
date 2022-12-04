@@ -92,6 +92,7 @@
                     <asp:Label ID="Label3" runat="server" Font-Size="X-Large" Text="Price:"></asp:Label>
                 </td>
                 <td class="auto-style45">
+                    <asp:Label ID="lblPrice0" runat="server" ForeColor="Red" Font-Size="X-Large">RM</asp:Label>
                     <asp:Label ID="lblPrice" runat="server" ForeColor="Red" Font-Size="X-Large"></asp:Label>
                 </td>
                 <td class="auto-style46">
@@ -171,6 +172,7 @@
                     <asp:Label ID="Label7" runat="server" Font-Size="X-Large" Text="Total Price :"></asp:Label>
                 </td>
                 <td class="auto-style45">
+                    <asp:Label ID="lblToTal0" runat="server" ForeColor="#CC00FF" Font-Size="X-Large">RM</asp:Label>
                     <asp:Label ID="lblToTal" runat="server" ForeColor="#CC00FF" Font-Size="X-Large"></asp:Label>
                 </td>
                 <td class="auto-style46">

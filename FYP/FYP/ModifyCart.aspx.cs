@@ -11,6 +11,7 @@ namespace FYP
 {
     public partial class ModifyCart : System.Web.UI.Page
     {
+        double price;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,11 +36,13 @@ namespace FYP
                         lblDesc.Text = dtrInfo["cartDesc"].ToString();
                         lblCategory.Text = dtrInfo["cartCategory"].ToString();
                         lblSize.Text = dtrInfo["size"].ToString();
-                        lblPrice.Text = dtrInfo["cartPrice"].ToString();
+                        price = Convert.ToDouble(dtrInfo["cartPrice"].ToString());
                         lblStock.Text = dtrInfo["cartStock"].ToString();
                         DropDownList1.SelectedItem.Text = dtrInfo["quantity"].ToString();
 
                     }
+
+                    lblPrice.Text = price.ToString("0.00"); 
                     conn.Close();
                 }
                 int qty;
@@ -49,7 +52,7 @@ namespace FYP
                 totalPrice = qty * cost;
                 lblToTal.Text = totalPrice.ToString();
 
-                //jshbdkjsjaksndkjnaskdasd
+                
             }
 
 
