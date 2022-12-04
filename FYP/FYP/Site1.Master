@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="FYP.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Sportswear Order</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+        .auto-style18 {
+            width: 1500px;
+            margin: auto;
+            height: 413px;
+        }
+        .auto-style1 {
+            width: 51px;
+            height: 42px;
+        }
+
+        .auto-style2 {
+            height: 43px;
+            margin-left: 1px;
+            width: 48px;
+        }
+
+        .auto-style3 {
+            height: 41px;
+            margin-left: 1px;
+            width: 48px;
+        }
+        
+        
+    
+        
+        .auto-style27 {
+            text-align: center;
+            color: white;
+            background-color: black;
+        }
+        .auto-style28 {
+            font-size: large;
+            background-color :black;
+        }
+        .auto-style29 {
+            text-align: left;
+        }
+        
+        
+        
+ </style>
+</head>
+<body >
+    <link href="css/styleSheet.css" rel="stylesheet" />
+    <form id="form1" runat="server">
+       <div class ="auto-style18">
+            <div class="Menu"> 
+                <ul class="auto-style15">
+                                  
+
+                   
+                     
+                    
+                    
+                    <li><asp:Image ID="Image1" runat="server" Height="70px" ImageUrl="~/Image/Logo.jpg" Width="130px" /></li>
+                    <li> <asp:Button ID="btnAdminProduct" runat="server" Text="Admin Product" href ="AdminProduct.aspx"  BorderStyle="None" Height="38px" CssClass="btn4"  Width ="180px" OnClick="btnAdminProduct_Click" CausesValidation="False"/></li>
+                    <li><asp:Button ID="btnUpload" runat="server" Text="Upload Product" href ="AddProduct.aspx"  BorderStyle="None" Height="38px" CssClass="btn4"  Width ="220px" OnClick="btnUpload_Click" CausesValidation="False"/></li>
+                    <li><asp:Button ID="btnReport" runat="server" Text="Report" href ="Report.aspx" BorderStyle="None" Height="38px" CssClass="btn4"  Width ="120px" OnClick="btnReport_Click" CausesValidation="False"/></li>
+                    <li><asp:Button ID="btnHomePage" runat="server" Text="Home" href ="Product.aspx" BorderStyle="None" Height="38px" CssClass="btn4"  Width ="120px" OnClick="btnHome_Click" CausesValidation="False"/></li>
+                   
+                    <li><asp:Button ID="btnPurchase" runat="server" Text="Purchase History"  BorderStyle="None" Height="38px" CssClass="btn4"  Width ="220px" OnClick="btnPurchase_Click" CausesValidation="False" /></li>
+                     
+
+                    
+                    <li><asp:ImageButton ID="imgBtnWishList" runat="server" Height="37px" href ="WishList.aspx" ImageUrl="~/Image/love.png" Width="44px" OnClick="ImgBtnWishList_Click" /></li>
+                    <li><asp:ImageButton ID="imgBtnCart" runat="server" Height="40px" ImageUrl="~/Image/cart.png" Width="45px" OnClick="imgBtnCart_Click" /></li>
+                    <li><asp:Button ID="btnSignUp" runat="server" Text="Sign Up" href ="Login.aspx"  Height="38px" CssClass="btn4"  Width ="120px" OnClick="btnSignUp_Click1" CausesValidation="False"/></li>
+                    <li><asp:Button ID="btnLogin" runat="server" Text="Login" href ="Register.aspx"   Height="38px" CssClass="btn4"  Width ="120px" OnClick="btnLogin_Click1" CausesValidation="False"/></li>
+                    <li><asp:Button ID="btnLogOut" runat="server" Text="Log Out"  BorderStyle="None" Height="38px" CssClass="btn4"  Width ="100px" OnClick="btnLogOut_Click" CausesValidation="False" /></li>  
+                    <li><asp:Button ID="btnProfile" runat="server" Text="Profile"  BorderStyle="None" Height="38px" CssClass="btn4"  Width ="100px" OnClick="btnProfile_Click" CausesValidation="False" /></li>
+                        <li><asp:Button ID="btnChat" runat="server" Text="Chat"  BorderStyle="None" Height="38px" CssClass="btn4"  Width ="100px" OnClick="btnChat_Click" CausesValidation="False" /></li>
+                </ul>
+            </div>
+        
+        
+        
+           <div class ="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                   <p>
+                    <br />
+                    </p>
+               
+                </asp:ContentPlaceHolder>
+            </div>
+        
+        <div>
+            
+             
+            <div class="footer">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 443px">
+                            <div class="column" >
+                                <h2>Contact Us</h2>
+                                <p class="auto-style27">No 45, Jalan Hang, Taman Raya,</p>
+                                <p class="auto-style27">43200, Kuala Lumpur, Malaysia.<br><br></p>
+                                <p class="auto-style27"><strong>Email:</strong> <br>DL448@sportswear.com.my<br><br></p>
+                                <p class="auto-style27"><strong>Phone:</strong><br>+603-8654 2528 <br><br></p>
+                                <p class="auto-style27"><strong>Fax:</strong><br>+603-8744 3629</p>
+               		            
+                            </div>
+                            <div class="column"  text-align: center;">
+                                
+                                <h2 class="auto-style29">Follow Us</h2>
+                                
+                                <div class="auto-style27">
+                                
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                
+                                <a href="#">
+                                    <img src="Image/Facebook.png" alt="Facebook" class="auto-style1" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">
+                                    <img src="Image/Instagram.png" alt="Instagram" class="auto-style2" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">
+                                    <img src="Image/Twitter.png" alt="Twitter" class="auto-style3" /></a>
+
+                                </div>
+
+                            </div>
+                            <div class="column" >
+                                <h2>Quick Licks</h2>
+                                <center class="footer-btn">
+
+                                
+                                <ul>
+                                     <li><asp:Button ID="btnAboutUs" runat="server" Text="About us" class="footer-btn"   ForeColor="White" CssClass="auto-style28" BorderStyle="None"/></li>                                        
+                                    <li><asp:Button ID="btnServices" runat="server" Text="Services" class="footer-btn"   ForeColor="White" Width="145px" CssClass="auto-style28" BorderStyle="None"/></li>                                        
+                                    <li><asp:Button ID="btnSolution" runat="server" Text="Solutions" class="footer-btn"  ForeColor="White" CssClass="auto-style28" BorderStyle="None"/></li>
+                                    <li><asp:Button ID="btnCust" runat="server" Text="Customers" class="footer-btn"  ForeColor="White" Width="171px" CssClass="auto-style28" BorderStyle="None"/></li> 
+                                    <li><asp:Button ID="btnTeam" runat="server" Text="Team" class="footer-btn"    ForeColor="White" Width="147px" CssClass="auto-style28" BorderStyle="None"/></li>                                        
+                                    <li><asp:Button ID="btnCareer" runat="server" Text="Career" class="footer-btn"  ForeColor="White" Width="154px" CssClass="auto-style28" BorderStyle="None"/></li>                                       
+                                    
+                                </ul>
+                                </center>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+
+        
+
+        </div>
+       </div>
+    </form>
+</body>
+</html>
