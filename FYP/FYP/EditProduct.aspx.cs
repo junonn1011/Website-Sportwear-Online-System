@@ -275,7 +275,8 @@ namespace FYP
                     conn.Open();
 
 
-                    SqlCommand cmdSelect = new SqlCommand("select * from WishList W, Product P, Register R  where P.productId = W.productId and W.userId = R.userId and P.productId = '" + lblSportswearId.Text + "' and W.stockStatus = '0' ", conn);
+                    SqlCommand cmdSelect = new SqlCommand("select * from WishList W, Product P, Register R  where P.productId = W.productId and W.userId = R.userId and P.productId = '" +
+                                                            lblSportswearId.Text + "' and W.stockStatus = '0' ", conn);
                     SqlDataReader dtr = cmdSelect.ExecuteReader();
 
                     if (dtr.HasRows)
@@ -311,7 +312,8 @@ namespace FYP
                             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
                              con.Open();
-                             String strModify = "update W set W.stockStatus='1', W.wishStock = '" + stock + "' from WishList W, Product P, Register R  where P.productId = W.productId and W.userId = R.userId and R.userId = '" + userId + "' and P.productId = '" + lblSportswearId.Text + "' and W.stockStatus = '0' ";
+                             String strModify = "update W set W.stockStatus='1', W.wishStock = '" + stock + "' from WishList W, Product P, Register R  where P.productId = W.productId and W.userId = R.userId and R.userId = '" 
+                                                + userId + "' and P.productId = '" + lblSportswearId.Text + "' and W.stockStatus = '0' ";
                              SqlCommand cmdInsert = new SqlCommand(strModify, con);
 
                              cmdInsert.ExecuteNonQuery();
@@ -320,13 +322,7 @@ namespace FYP
 
                         }
                     }
-
-
                     conn.Close();
-
-                    
-
-
                 }
                 btnEdit.Text = "Edit";
                 btnDelete.Visible = true;

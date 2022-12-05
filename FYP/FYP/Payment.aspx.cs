@@ -438,8 +438,6 @@ namespace FYP
                     String strInsert = "insert into DiscountVoucher(discountVoucher,userId) Values (@DiscountVoucher,@UserId) ";
                     SqlCommand cmdInsertPayment = new SqlCommand(strInsert, conn);
 
-
-
                     cmdInsertPayment.Parameters.AddWithValue("@DiscountVoucher", generateDisVch);
                     cmdInsertPayment.Parameters.AddWithValue("@UserId", Session["userId"]);
                     cmdInsertPayment.ExecuteNonQuery();
@@ -456,8 +454,6 @@ namespace FYP
                     conn.Open();
                     String strInsert = "insert into DiscountVoucher(discountVoucher,userId) Values (@DiscountVoucher,@UserId) ";
                     SqlCommand cmdInsertPayment = new SqlCommand(strInsert, conn);
-
-
 
                     cmdInsertPayment.Parameters.AddWithValue("@DiscountVoucher", generateDisVch);
                     cmdInsertPayment.Parameters.AddWithValue("@UserId", Session["userId"]);
@@ -476,8 +472,6 @@ namespace FYP
                     String strInsert = "insert into DiscountVoucher(discountVoucher,userId) Values (@DiscountVoucher,@UserId) ";
                     SqlCommand cmdInsertPayment = new SqlCommand(strInsert, conn);
 
-
-
                     cmdInsertPayment.Parameters.AddWithValue("@DiscountVoucher", generateDisVch);
                     cmdInsertPayment.Parameters.AddWithValue("@UserId", Session["userId"]);
                     cmdInsertPayment.ExecuteNonQuery();
@@ -487,10 +481,6 @@ namespace FYP
 
 
             }
-
-
-
-
 
 
         }

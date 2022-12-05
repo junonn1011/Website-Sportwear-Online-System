@@ -97,16 +97,11 @@ namespace FYP
         //Search Monthly Report
         protected void btnSearchMonth_Click(object sender, EventArgs e)
         {
-
             if (ddlMonth.SelectedIndex != 0 && ddlYear.SelectedIndex != 0)
             {
                 month = ddlMonth.SelectedValue;
                 year = ddlYear.SelectedValue;
-
-
                 conn.Open();
-
-
                 SqlCommand cmdSelect = new SqlCommand("select PH.image, PH.productName, PH.price, sum(PH.quantity) as Quantity, sum(PH.price * PH.quantity) as Total from PurchaseHistory PH, Payment P where PH.orderNo = P.orderNo and month(P.dateTime) = '" + month + "' and year(P.dateTime) = '" + year + "' Group by PH.productName, PH.price, PH.image", conn);
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = cmdSelect;
@@ -121,12 +116,10 @@ namespace FYP
                 {
                     while (dtr.Read())
                     {
-
                         price = Convert.ToDouble(dtr["Total"].ToString());
                         quantity = Convert.ToInt32(dtr["Quantity"].ToString());
                         totalPay += price;
                         totalItem += quantity;
-
                     }
                     lblSalesAmount.Visible = true;
                     lblSalesAmount.Text = totalPay.ToString("0.00");
@@ -139,7 +132,6 @@ namespace FYP
                     lbltxtItem.Visible = true;
                     lbltxtReport1.Visible = true;
                     lbltxtReport1.Text = "Monthly Sales Report";
-
                 }
                 else
                 {
@@ -165,12 +157,7 @@ namespace FYP
         {
 
             dateTime = txtDateTime.Text;
-
-
-
             conn.Open();
-
-
             SqlCommand cmdSelect = new SqlCommand("select PH.image, PH.productName, PH.price, sum(PH.quantity) as Quantity, sum(PH.price * PH.quantity) as Total from PurchaseHistory PH, Payment P where PH.orderNo = P.orderNo and FORMAT(P.dateTime,'dd/MM/yyyy') = '" + dateTime + "' Group by PH.productName, PH.price, PH.image ", conn);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmdSelect;
@@ -185,7 +172,6 @@ namespace FYP
             {
                 while (dtr.Read())
                 {
-
                     price = Convert.ToDouble(dtr["Total"].ToString());
                     quantity = Convert.ToInt32(dtr["Quantity"].ToString());
                     totalPay += price;
