@@ -235,7 +235,7 @@
                 <td class="auto-style65" colspan="4">
                     <asp:TextBox ID="txtCardNum" runat="server" Visible="False"></asp:TextBox>
                     <asp:TextBox ID="txtAccNum" runat="server" Visible="False" ForeColor="Black" Width="168px"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCardNum" ErrorMessage="Invalid Card Number !" ForeColor="Red">*</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCardNum" ErrorMessage="Format Card Number must xxxx-xxxx-xxxx-xxxx .(First number of Visa : 4 ; Master : 5)" ForeColor="Red">*</asp:RegularExpressionValidator>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtCardNum" ErrorMessage="Credit Card Number Is Required !" ForeColor="Red">*</asp:RequiredFieldValidator>
                     <asp:CompareValidator runat="server" Operator="DataTypeCheck" Type="Integer"
                         ControlToValidate="txtAccNum" ErrorMessage="Account Number Only Accept Number !" ForeColor="Red">*</asp:CompareValidator>

@@ -363,12 +363,12 @@ namespace FYP
             if (radCardType.SelectedValue == "Visa")
             {
 
-                RegularExpressionValidator1.ValidationExpression = @"4\d{15}";
+                RegularExpressionValidator1.ValidationExpression = @"^4[0-9]{3}(?:-[0-9]{4}){3}";
 
             }
             else
             {
-                RegularExpressionValidator1.ValidationExpression = @"5\d{15}";
+                RegularExpressionValidator1.ValidationExpression = @"5[0-9]{3}(?:-[0-9]{4}){3}";
 
             }
         }
