@@ -304,7 +304,7 @@ namespace FYP
                             MailMessage msg = new MailMessage();
                             msg.To.Add(email);
                             msg.From = new MailAddress("DLM Sportwear<facilityreserve123@gmail.com>");
-                            msg.Subject = "Order Receipt";
+                            msg.Subject = "Restock Notification";
                             msg.Body = sb.ToString();
                             client.Send(msg);
 
