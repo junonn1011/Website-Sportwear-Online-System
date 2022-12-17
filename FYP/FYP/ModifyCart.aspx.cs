@@ -110,7 +110,7 @@ namespace FYP
                 Response.Write("<script>alert ('The stocks are not available!!!');</script> ");
             }
         }
-        //hello
+        
         public Boolean checkStock()
         {
             int stock, qty;
